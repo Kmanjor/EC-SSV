@@ -1,0 +1,332 @@
+### project pathway
+CondaENV: /home/zhengjingjing/anaconda3/envs/RB
+PIPENV_WZK: /home/wuzhikun/github/NanoHub
+
+PIPENV: /home/zhengjingjing/github/SV
+project_path: /home/zhengjingjing/Project/RB
+
+THREADS: 4
+ThreadFold: 14
+
+################ common tools ############
+samtools: /home/zhengjingjing/anaconda3/envs/RB/bin/samtools
+bedtools: /home/zhengjingjing/anaconda3/envs/RB/bin/bedtools
+AnnotSV: /home/litong/software/AnnotSV/bin/AnnotSV
+bcftools: /home/zhengjingjing/anaconda3/envs/RB/bin/bcftools
+ngmlr: /home/litong/software/ngmlr-0.2.7/ngmlr
+sniffles: /home/litong/software/Sniffles-master/bin/sniffles-core-1.0.12/sniffles
+cuteSV: /home/litong/anaconda3/envs/cuteSV/bin/cuteSV
+nanopolish: /home/jiangzehang/biosoft/nanopolish/nanopolish
+nanopolish_fre: /home/jiangzehang/biosoft/nanopolish/scripts/calculate_methylation_frequency.py
+mtsv2bedGraph: /home/litong/software2/nanopore-methylation-utilities-master/mtsv2bedGraph.py
+convert_bam_for_methylation: /home/litong/software2/nanopore-methylation-utilities-master/convert_bam_for_methylation.py
+
+
+################# conditions ##################
+### NanoFilt
+readtype: "1D"
+minQuality: 7
+minLength: 500
+headcrop: 40 
+tailcrop: 20
+
+### sniffles
+min_support: 3
+min_length: 50
+minmapping_qual: 20
+num_reads_report: -1
+min_seq_size: 500
+
+
+################# resource ##################
+RefGenome: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+
+
+
+
+
+
+
+
+################# NGS ##################
+### quality control
+length_required: 50
+qualified_quality_phred: 15
+unqualified_percent_limit: 30
+cut_window_size: 1
+cut_mean_quality: 20
+########################################
+
+
+### Mosdepth
+windowSize: 500000
+sliding: 100
+maxDepth: 25
+width: 6
+height: 8
+
+### IGV
+IGV_distance: 50
+
+IGVmemory: "-Xmx100g"
+
+### homozygous recessive
+homo_depth: 10
+
+
+### annotation
+annotsv_overlap: 70
+promoterSize: 500
+
+
+### SV filt
+SVtargetColumns: "'DGV_GAIN_Frequency,DGV_LOSS_Frequency,1000g_AF,1000g_max_AF,IMH_AF'"
+frequencyThreshold: 0.001
+
+phage_lambda: /home/wuzhikun/database/genome/phage_lambda/phage_lambda.fasta
+#RefGenome: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chr1.fa
+
+faidx: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+maskREF: /home/wuzhikun/database/genome/GRCh38/mask/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa
+GenomeDict: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.dict
+genePred: /home/wuzhikun/database/Annovar/hg38/EnsProteinGene/hg38_ensGene_coding_feature_promoter_sort_chr.txt
+geneFuncRegion: /home/wuzhikun/database/Annovar/hg38/hg38_ensGene_dechr_split_unique.txt
+ensGene: /home/wuzhikun/database/Annovar/hg38/hg38_ensGene_dechr.txt
+chromosome: "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,X" #,Y
+GenomeLen: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38_length.txt
+GenomeLenChr: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38_length_chr_chr.txt
+# centromere: /home/wuzhikun/database/Annovar/hg38/hg38_cytoBand_acen_region.txt
+centromere: /home/wuzhikun/database/Annovar/hg38/hg38.centromere.txt
+repeatRegion: /home/wuzhikun/database/genome/low_complexity_regions/hg38.trf_dechr.bed
+
+
+SZDabase: "/home/wuzhikun/database/SZDB/download/GWAS-Genes/PGC2_GENE.txt,/home/wuzhikun/database/SZDB/download/GWAS-Genes/CLOZUK_GENE.txt,/home/wuzhikun/database/SZDB/download/Gene_Imputation.txt,/home/wuzhikun/database/SZDB/download/cnvgene.txt"
+
+DfamType: /home/wuzhikun/database/Dfam/Dfam_type.xls
+DfamHmm: /home/wuzhikun/database/Dfam/Dfam.hmm
+
+metafile: /home/zhengjingjing/Project/RB/meta_information.txt
+
+IGV: /home/litong/software/igv_2.4.2/IGV_2.4.2/igv.jar
+
+
+picard: /home/wuzhikun/anaconda3/envs/WGS/bin/picard.jar
+plink: /home/wuzhikun/anaconda3/envs/WGS/bin/plink
+admixture: /home/wuzhikun/software/admixture_linux-1.3.0/admixture
+smartpca: /home/wuzhikun/software/Eigensoft/EIG-7.2.1/bin/smartpca.perl
+beagle: /home/wuzhikun/software/beagle5/beagle.21Sep19.ec3.jar
+VarScan: /home/wuzhikun/anaconda3/envs/WGS/bin/VarScan.jar
+
+ensGene_gtf95: /home/wuzhikun/database/Annovar/hg38/hg38_ensGene_gtf95.txt
+enhancerRegion: /home/wuzhikun/database/FANTOM5/F5.hg38.enhancers_dechr.bed
+enhancerRegionGene: /home/wuzhikun/database/FANTOM5/F5.hg38.enhancers_dechr_genes.bed
+regulatorRegion: /home/wuzhikun/database/FANTOM5/hg38_fair+new_CAGE_peaks_phase1and2_dechr.bed
+regulatorRegionGene: /home/wuzhikun/database/FANTOM5/hg38_fair+new_CAGE_peaks_phase1and2_dechr_genes.bed
+promoterRegion: /home/wuzhikun/database/Annovar/hg38/hg38_ensGene_gtf95_promoter_sorted_deStrand.bed
+gerpRegion: /home/wuzhikun/database/GERP/hg38_all_GEPR_dechr_sorted.bed
+DNAHyperRegion: /home/wuzhikun/database/DNaseI_Hypersensitivity/hg38_wgEncodeRegDnaseClusteredV3_dechr_sorted.bed
+TransFactorRegion: /home/wuzhikun/database/ChipTransFactor/hg38_wgEncodeRegTfbsClusteredWithCellsV3_dechr_sorted.bed
+
+
+codingGene: /home/wuzhikun/database/genome/GRCh38/GRCh38_protein_coding_gene.txt
+cancerGene: /home/wuzhikun/database/CancerMine/cancermine_genelist.txt
+cosmicGene: /home/wuzhikun/database/COSMIC/cancer_gene_census.gene
+table_annovar: /home/wuzhikun/software/annovar/table_annovar.pl
+Annovardb: /home/wuzhikun/database/Annovar/hg38
+
+
+## circos
+circosConfig: /home/wuzhikun/Project/NanoTrio/circos.conf
+
+cytoband: /home/wuzhikun/database/Annovar/hg38/hg38_cytoBand.txt
+### database
+dbVar: /home/wuzhikun/database/dbVar/GRCh38.variant_call.vcf
+phase3SV: /home/wuzhikun/database/phase3_sv/ALL.wgs.mergedSV.v8.20130502.svs.genotypes.GRCh38.vcf
+DGV: /home/wuzhikun/database/DGV/GRCh38_hg38_variants_2016-08-31.txt
+
+LCR: /home/wuzhikun/database/genome/GRCh38/varcmp-master/scripts/LCR-hs38_dechr.bed
+
+# EnrichLibrary: "KEGG_2019_Human,GO_Biological_Process_2018,GO_Molecular_Function_2018,GO_Cellular_Component_2018,GWAS_Catalog_2019,UK_Biobank_GWAS_v1,MGI_Mammalian_Phenotype_Level_4_2019,OMIM_Disease,OMIM_Expanded,Reactome_2016,GTEx_Tissue_Sample_Gene_Expression_Profiles_down,GTEx_Tissue_Sample_Gene_Expression_Profiles_up,Tissue_Protein_Expression_from_Human_Proteome_Map,Tissue_Protein_Expression_from_ProteomicsDB,WikiPathways_2019_Human,PPI_Hub_Proteins"
+
+
+# EnrichLibrary: "ClinVar_2019,KEGG_2019_Human,GO_Biological_Process_2018,GO_Molecular_Function_2018,GO_Cellular_Component_2018,GWAS_Catalog_2019,UK_Biobank_GWAS_v1,MGI_Mammalian_Phenotype_Level_4_2019,OMIM_Disease,OMIM_Expanded,Reactome_2016,GTEx_Tissue_Sample_Gene_Expression_Profiles_down,GTEx_Tissue_Sample_Gene_Expression_Profiles_up,Tissue_Protein_Expression_from_Human_Proteome_Map,Tissue_Protein_Expression_from_ProteomicsDB,WikiPathways_2019_Human,PPI_Hub_Proteins,RNA-Seq_Disease_Gene_and_Drug_Signatures_from_GEO,Jensen_DISEASES,Disease_Signatures_from_GEO_up_2014,Allen_Brain_Atlas_up"
+
+
+EnrichLibrary: "KEGG_2019_Human,GO_Biological_Process_2018,GO_Molecular_Function_2018,GO_Cellular_Component_2018,GWAS_Catalog_2019,UK_Biobank_GWAS_v1,MGI_Mammalian_Phenotype_Level_4_2019,OMIM_Disease,OMIM_Expanded,Reactome_2016"
+
+CodingGene: /home/wuzhikun/database/GeneAnno/GRCh38/Annotation/GRCh38_protein_coding_gene.txt
+ProteinAnno: ~/database/GeneAnno/GRCh38/Annotation/Homo_sapiens.GRCh38.95_GeneAnno_description-1.xls
+GeneClinvar: /home/wuzhikun/database/ClinVar/target_genes_1113_clinvar.txt
+GeneOMIM: /home/wuzhikun/database/OMIM/target_genes_1113_omim.txt
+### repeats
+dfam_nrph: /home/wuzhikun/database/Dfam/hg38_dfam.nrph.hits_sort_dechr.bed
+
+
+Chr_dir: /home/wuzhikun/database/genome/GRCh38/Chrs
+FREEC_ChrLength: /home/wuzhikun/database/genome/GRCh38/Homo_sapiens.GRCh38_length_chr_chr-1.txt
+sambamba: /home/wuzhikun/anaconda3/envs/WGS/bin/sambamba
+
+
+### gnomAD
+gnomAD:
+  DEL: /home/wuzhikun/database/gnomAD/gnomad_v2_sv.sites_DEL.bed
+  INS: /home/wuzhikun/database/gnomAD/gnomad_v2_sv.sites_INS.bed
+  DUP: /home/wuzhikun/database/gnomAD/gnomad_v2_sv.sites_DUP.bed
+  INV: /home/wuzhikun/database/gnomAD/gnomad_v2_sv.sites_INV.bed
+
+# gnomAD_DEL: /home/wuzhikun/database/gnomAD/gnomad_v2_sv.sites_DEL.bed
+
+
+### SV filt
+targetColumns: "DGV_GAIN_Frequency,DGV_LOSS_Frequency,1000g_max_AF,IMH_AF"
+frequencyThreshold: 0.02
+
+SAMPLES:
+  # - RB01-normal
+  # - RB01-tumor
+  # - RB02-normal
+  # - RB02-tumor
+  # - RB03-normal
+  # - RB03-tumor
+  # - RB04-normal
+  # - RB04-tumor
+  # - RB05-normal
+  # - RB05-tumor
+  # - RB06-normal
+  # - RB06-tumor
+  # - RB07-normal
+  # - RB07-tumor
+  - RB08-normal
+  - RB08-tumor
+  # - RB09-normal
+  # - RB09-tumor
+  # - RB10-normal
+  # - RB10-tumor
+  # - RB11-normal
+  # - RB11-tumor
+  # - RB12-normal
+  # - RB12-tumor
+  # - RB13-normal
+  # - RB13-tumor
+  # - RB14-normal
+  # - RB14-tumor
+  # - RB15-normal
+  # - RB15-tumor
+  # - RB16-normal
+  # - RB16-tumor
+
+PAIRS:
+  # - RB01
+  # - RB02
+  # - RB03
+  # - RB04
+  # - RB05
+  # - RB06
+  # - RB07
+  - RB08
+  # - RB09
+  # - RB10
+  # - RB11
+  # - RB12
+  # - RB13
+  # - RB14
+  # - RB15
+  # - RB16
+
+NORMALS:
+  # - RB01-normal
+  # - RB02-normal
+  # - RB03-normal
+  # - RB04-normal
+  # - RB05-normal
+  # - RB06-normal
+  # - RB07-normal
+  - RB08-normal
+  # - RB09-normal
+  # - RB10-normal
+  # - RB11-normal
+  # - RB12-normal
+  # - RB13-normal
+  # - RB14-normal
+  # - RB15-normal
+  # - RB16-normal
+
+
+
+TOOL:
+  - minimap2
+  - ngmlr
+
+
+CALLERS:
+  - sniffles
+  - cutesv
+
+
+CHRS:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - X
+  # - Y
+
+
+AUTOSOMES:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+
+
+SVTYPES:
+  - DEL
+  - INS
+  - INV
+  - DUP
+  # - TRA
+  # - INVDUP
+
+### SV plot
+SVType: "DEL,INS,DUP,INV,TRA,INVDUP"
+BinMaxNum: 60
+denovoMaxNum: 10
+
+
+PARENTS:
