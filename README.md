@@ -3,7 +3,7 @@
 ### Description
 EC-SSV is a pipeline for detecting somatic structural variations from paired (tumor and matched normal) cancer genome sequence data based on snakemake workflow management system.
 
-### Description
+### Requirements
   1. snakemake v7.2.1
   2. minimap2 v2.17-r941
   3. ngmlr v0.2.7
@@ -13,3 +13,6 @@ EC-SSV is a pipeline for detecting somatic structural variations from paired (tu
   7. Fmlrc2 v1.0.0
   8. Jasmine v1.1.5
   9. IGV v2.12.2
+  10. Guppy v4.0.15
+  11. Nanopolish v0.13.2
+  12. PEPPER v0.6
